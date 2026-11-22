@@ -9,7 +9,7 @@ The landing page at [indrayam.com](https://indrayam.com/): a portrait and links 
 | `index.html` | The whole page: the portrait with the menu to its right (stacked below it on phones). No visible name and no nav bar. |
 | `assets/style.css` | White page, the blog's orange accent bar, Fraunces (Google Fonts): Light 300 for the menu, Regular 400 for the footer. Menu links are black; hovering or focusing one shows a thick orange underline. The photo's edges fade to white with a CSS mask (`--fade`), so the image file itself has no border baked in. |
 | `assets/anand.webp`, `assets/anand.jpg` | Portrait, 640×800, metadata stripped. The JPEG is the fallback for browsers without WebP. |
-| `favicon.ico` | Copied from the blog. |
+| `favicon.ico`, `assets/apple-touch-icon.png` | A tight crop of the portrait (16, 32 and 48px in the `.ico`; 180px touch icon). Resume, The Daily Diff, and Cribsheets use the same icon; the blog keeps its own. |
 | `robots.txt`, `sitemap.xml` | Crawler files for this host only. The blog has its own at `blog.indrayam.com`. |
 | `vercel.json` | Redirects. See below. |
 
