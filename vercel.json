@@ -1,0 +1,65 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    {
+      "source": "/archives/application_development/:post(\\d{1,}).php",
+      "destination": "https://blog.indrayam.com/archives/application-development/:post.html",
+      "permanent": true
+    },
+    {
+      "source": "/archives/english_vocabulary/:post(\\d{1,}).php",
+      "destination": "https://blog.indrayam.com/archives/english-vocabulary/:post.html",
+      "permanent": true
+    },
+    {
+      "source": "/archives/how_do_i/:post(\\d{1,}).php",
+      "destination": "https://blog.indrayam.com/archives/how-do-i/:post.html",
+      "permanent": true
+    },
+    {
+      "source": "/archives/internet_adoption_across_the_globe/:post(\\d{1,}).php",
+      "destination": "https://blog.indrayam.com/archives/internet-adoption-across-the-globe/:post.html",
+      "permanent": true
+    },
+    {
+      "source": "/archives/it_and_business_trends/:post(\\d{1,}).php",
+      "destination": "https://blog.indrayam.com/archives/it-and-business-trends/:post.html",
+      "permanent": true
+    },
+    {
+      "source": "/archives/other_stuff/:post(\\d{1,}).php",
+      "destination": "https://blog.indrayam.com/archives/other-stuff/:post.html",
+      "permanent": true
+    },
+    {
+      "source": "/archives/our_world/:post(\\d{1,}).php",
+      "destination": "https://blog.indrayam.com/archives/our-world/:post.html",
+      "permanent": true
+    },
+    {
+      "source": "/archives/services_and_software/:post(\\d{1,}).php",
+      "destination": "https://blog.indrayam.com/archives/services-and-software/:post.html",
+      "permanent": true
+    },
+    {
+      "source": "/archives/united_or_not_state_of_american_politics_2004/:post(\\d{1,}).php",
+      "destination": "https://blog.indrayam.com/archives/united-or-not-state-of-american-politics-2004/:post.html",
+      "permanent": true
+    },
+    {
+      "source": "/archives/us_presidential_elections_2008/:post(\\d{1,}).php",
+      "destination": "https://blog.indrayam.com/archives/us-presidential-elections-2008/:post.html",
+      "permanent": true
+    },
+    {
+      "source": "/archives/:category([a-z0-9-]+)/:post(\\d{1,}).php",
+      "destination": "https://blog.indrayam.com/archives/:category/:post.html",
+      "permanent": true
+    },
+    {
+      "source": "/((?!assets/|robots\\.txt$|sitemap\\.xml$|favicon\\.ico$).+)",
+      "destination": "https://blog.indrayam.com/$1",
+      "permanent": true
+    }
+  ]
+}

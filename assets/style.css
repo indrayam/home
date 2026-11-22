@@ -1,0 +1,139 @@
+/* indrayam.com home page. The orange accent matches the blog's Emma theme
+   (blog/style.css); keep it in step if that palette changes. */
+
+:root {
+	--color-text: #111111;
+	--color-faint: #8a8a8a;
+	--color-accent: #e7651a;
+	--color-page: #ffffff;
+	--font-ui: Fraunces, Georgia, "Times New Roman", serif;
+	--fade: 14%; /* how far the photo's edges fade into the page */
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	color: var(--color-text);
+	font-family: var(--font-ui);
+	background-color: var(--color-page);
+	border-top: 10px solid var(--color-accent);
+}
+
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	white-space: nowrap;
+	border: 0;
+}
+
+.home {
+	flex: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: clamp(32px, 5vw, 64px);
+	padding: 40px 16px;
+}
+
+/* Soft edges: two gradient masks, intersected, fade all four sides to white. */
+.portrait img {
+	display: block;
+	width: min(360px, 42vw);
+	height: auto;
+	-webkit-mask-image:
+		linear-gradient(to right, transparent, #000 var(--fade), #000 calc(100% - var(--fade)), transparent),
+		linear-gradient(to bottom, transparent, #000 var(--fade), #000 calc(100% - var(--fade)), transparent);
+	-webkit-mask-composite: source-in;
+	mask-image:
+		linear-gradient(to right, transparent, #000 var(--fade), #000 calc(100% - var(--fade)), transparent),
+		linear-gradient(to bottom, transparent, #000 var(--fade), #000 calc(100% - var(--fade)), transparent);
+	mask-composite: intersect;
+}
+
+.menu ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.menu li + li {
+	margin-top: 18px;
+}
+
+.menu a {
+	display: inline-block;
+	padding: 4px 0;
+	color: var(--color-text);
+	font-size: 1.5rem;
+	font-weight: 300;
+	letter-spacing: -0.01em;
+	text-decoration: underline;
+	text-decoration-color: transparent;
+	text-decoration-thickness: 4px;
+	text-underline-offset: 8px;
+	transition: text-decoration-color 0.15s ease;
+}
+
+.menu a:hover,
+.menu a:focus-visible {
+	text-decoration-color: var(--color-accent);
+}
+
+.menu a:focus-visible {
+	outline: none;
+}
+
+.copyright {
+	padding: 0 16px 16px;
+	font-size: 11px;
+	text-align: center;
+	color: var(--color-faint);
+}
+
+.copyright a {
+	color: inherit;
+}
+
+@media (max-width: 600px) {
+	.home {
+		flex-direction: column;
+		gap: 20px;
+		padding-top: 24px;
+	}
+
+	.portrait img {
+		width: min(320px, 80vw);
+	}
+
+	.menu {
+		text-align: center;
+	}
+
+	.menu li + li {
+		margin-top: 6px;
+	}
+
+	.menu a {
+		padding: 8px 0;
+		font-size: 1.3rem;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.menu a {
+		transition: none;
+	}
+}
