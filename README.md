@@ -1,12 +1,12 @@
 # indrayam.com home
 
-The landing page at [indrayam.com](https://indrayam.com/): a portrait and links to About Me, Resume, and, under My Interests, The Daily Diff, Cribsheets, and Writings (the blog). It is one of five static sites in the `indrayam.com` workspace; the parent [`AGENTS.md`](../AGENTS.md) describes how they fit together.
+The landing page at [indrayam.com](https://indrayam.com/): a portrait and links to About Me, Resume, and, under My Interests, The Daily Diff, Cribsheets, Sightings, and Writings (the blog). It is one of six static sites in the `indrayam.com` workspace; the parent [`AGENTS.md`](../AGENTS.md) describes how they fit together.
 
 ## Files
 
 | File | Role |
 | --- | --- |
-| `index.html` | The whole page: the portrait with the menu to its right (stacked below it on phones). The menu is About Me, Resume, and a "My Interests" heading over smaller links to Daily Diff, Cribsheets, and Writings (the blog). No visible name and no nav bar. |
+| `index.html` | The whole page: the portrait with the menu to its right (stacked below it on phones). The menu is About Me, Resume, and a "My Interests" heading over smaller links to Daily Diff, Cribsheets, Sightings, and Writings (the blog). No visible name and no nav bar. |
 | `assets/style.css` | White page, the blog's orange accent bar, Fraunces (Google Fonts): Light 300 for the menu, Regular 400 for the footer. Menu links are black (the three under My Interests are smaller and mid-grey, `#555`); hovering or focusing one shows a thick orange underline. The photo's edges fade to white with a CSS mask (`--fade`), so the image file itself has no border baked in. |
 | `assets/anand.webp`, `assets/anand.jpg` | Portrait, 640×800, metadata stripped. The JPEG is the fallback for browsers without WebP. |
 | `favicon.ico`, `apple-touch-icon.png` | A tight crop of the portrait (16, 32 and 48px in the `.ico`; 180px touch icon). Every indrayam.com site serves these same two files at its root and links them with the same two tags: `<link rel="icon" href="/favicon.ico" sizes="any">` and `<link rel="apple-touch-icon" href="/apple-touch-icon.png">`. |
