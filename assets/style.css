@@ -73,13 +73,18 @@ body {
 	margin-top: 18px;
 }
 
-.menu a {
+.menu a,
+.menu-heading {
 	display: inline-block;
+	margin: 0;
 	padding: 4px 0;
 	color: var(--color-text);
 	font-size: 1.5rem;
 	font-weight: 300;
 	letter-spacing: -0.01em;
+}
+
+.menu a {
 	text-decoration: underline;
 	text-decoration-color: transparent;
 	text-decoration-thickness: 4px;
@@ -90,6 +95,22 @@ body {
 .menu a:hover,
 .menu a:focus-visible {
 	text-decoration-color: var(--color-accent);
+}
+
+/* "My Interests": a plain heading with its three links beneath, smaller. */
+.menu-group ul {
+	margin-top: 4px;
+	padding-left: 22px;
+}
+
+.menu-group li + li {
+	margin-top: 4px;
+}
+
+.menu-group a {
+	font-size: 1.15rem;
+	text-decoration-thickness: 3px;
+	text-underline-offset: 6px;
 }
 
 .menu a:focus-visible {
@@ -127,9 +148,24 @@ body {
 		margin-top: 6px;
 	}
 
-	.menu a {
+	.menu a,
+	.menu-heading {
 		padding: 8px 0;
 		font-size: 1.3rem;
+	}
+
+	.menu-group ul {
+		margin-top: 0;
+		padding-left: 0;
+	}
+
+	.menu-group li + li {
+		margin-top: 0;
+	}
+
+	.menu-group a {
+		padding: 6px 0;
+		font-size: 1.05rem;
 	}
 }
 
