@@ -100,17 +100,25 @@ body {
 /* "My Interests": a plain heading with its three links beneath, smaller. */
 .menu-group ul {
 	margin-top: 4px;
-	padding-left: 22px;
 }
 
 .menu-group li + li {
 	margin-top: 4px;
 }
 
+/* A shade lighter than the top-level links (7.5:1 on white, still AA/AAA),
+   turning full black when hovered or focused. */
 .menu-group a {
+	color: #555555;
 	font-size: 1.15rem;
 	text-decoration-thickness: 3px;
 	text-underline-offset: 6px;
+	transition: text-decoration-color 0.15s ease, color 0.15s ease;
+}
+
+.menu-group a:hover,
+.menu-group a:focus-visible {
+	color: var(--color-text);
 }
 
 .menu a:focus-visible {
