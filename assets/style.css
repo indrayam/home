@@ -1,5 +1,5 @@
-/* indrayam.com home page. The orange accent matches the blog's Emma theme
-   (blog/style.css); keep it in step if that palette changes. */
+/* indrayam.com home page. The orange accent (#e7651a) is shared by every
+   indrayam.com site (see --color-accent in blog/style.css); keep them in step. */
 
 :root {
 	--color-text: #111111;
@@ -97,7 +97,7 @@ body {
 	text-decoration-color: var(--color-accent);
 }
 
-/* "My Interests": a plain heading with its three links beneath, smaller. */
+/* "My Interests": a plain heading with its four links beneath, smaller. */
 .menu-group ul {
 	margin-top: 4px;
 }
