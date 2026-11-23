@@ -57,7 +57,7 @@
       "permanent": true
     },
     {
-      "source": "/((?!assets/|robots\\.txt$|sitemap\\.xml$|favicon\\.ico$).+)",
+      "source": "/((?!assets/|robots\\.txt$|sitemap\\.xml$|favicon\\.ico$|apple-touch-icon\\.png$).+)",
       "destination": "https://blog.indrayam.com/$1",
       "permanent": true
     }
